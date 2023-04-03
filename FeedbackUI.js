@@ -2,8 +2,7 @@ const rating = document.querySelectorAll('.rating')
 const container = document.getElementById('container')
 const button = document.getElementById('btn')
 const suggestion = document.getElementById('rating-input')
-
-
+const comment = document.getElementById('rating-comment')
 
 
 let selectedRating = "";
@@ -23,10 +22,12 @@ button.addEventListener("click", () => {
     if(selectedRating !== ""){
         container.innerHTML = `
         <strong>Thank you!</strong>
-        <br>
-        <br>
+        <br><br>
         Feedback: ${selectedRating}
+        <br><br>
+        Your Suggestion: ${comment.value}
         <p>We'll use your feedback to improve our customer support</p>
+        <br>
         ` 
     }
 })
@@ -37,19 +38,4 @@ function removeActive() {
     })
 }
 
-/* function suggBox(){
-    if(selectedRating !== ""){
-        suggestion.style.display='block'
-    }
-    else{
-        suggestion.style.display='none'
-    }
-    panel = true;
-     if(panel === true){
-            suggestion.style.display='block'
-        }
-        else if (panel === false){
-            suggestion.style.display='none'
-        }
-} */
  
